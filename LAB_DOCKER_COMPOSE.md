@@ -673,22 +673,17 @@ exit
    ```
 6. ต้องการลบ image ชื่อ nginx:alpine จะต้องเขียนคำสั่งอย่างไร หากมีหลายขั้นตอนที่ต้องเขียน ให้เขียนลำดับคำสั่งให้ถูกต้อง
    ```bash
+   **หยุดการทำงาน:** `docker stop <ชื่อคอนเทนเนอร์>`
+   **ลบตัวคอนเทนเนอร์:** `docker rm <ชื่อคอนเทนเนอร์>`
+   **คำสั่ง:** `docker rmi nginx:alpine`
 ---
-
-* **หยุดการทำงาน:** `docker stop <ชื่อคอนเทนเนอร์>`
-* **ลบตัวคอนเทนเนอร์:** `docker rm <ชื่อคอนเทนเนอร์>`
-* **คำสั่ง:** `docker rmi nginx:alpine`
 
    ```
 7. เมื่อลบ image แล้วให้ทำการ pull image กลับมาเหมือนเดิม พร้อมทำการรัน container
    ```bash
-   สั้นๆ 2 ขั้นตอนครับ:
+   docker pull nginx:alpine
 
-1. **ดึง Image กลับมา:**
-   `docker pull nginx:alpine`
-
-2. **รัน Container:**
-   `docker run -d --name my-nginx -p 8080:80 nginx:alpine`
+   docker run -d --name my-nginx -p 8080:80 nginx:alpine
    ```
 ---
 
