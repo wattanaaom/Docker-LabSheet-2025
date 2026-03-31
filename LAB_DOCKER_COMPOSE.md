@@ -493,7 +493,7 @@ a1b2c3d4e5f6   nginx:alpine   "/docker-entrypoint.…"   2 seconds ago  Up 2 sec
 
 **บันทึกผลการทดลอง**
 ```
-บันทึกรูปผลการทดลอง คำสั่ง docker ps
+![alt text](image.png)
 ```
 
 เปิด Browser ไปที่ **http://localhost:8080** ควรเห็นหน้า `Welcome to nginx!`
